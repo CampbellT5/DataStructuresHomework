@@ -1,15 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Crate
+namespace ConsoleApp1
 {
-  private string Id;
-  public double Price;
-      
-  public Crate()
-  {
-    //this still needs to be worked on. I thought Random had a NextDouble, but 
-    //I dont think NextDouble can take in integers?
-      Price = new Random.NextDouble(50,501);
-  }
-  
-  
+    public class Crate
+    {
+        public string Id { get; set; }
+
+        public double Price { get; set; }
+
+
+        private int id = 0000001;
+        
+        
+        public Crate()
+        {
+            Id = id++.ToString();
+
+
+            double price = new Random().Next(50,501);
+            Price = price;
+            
+        }
+    }
 }
